@@ -4,13 +4,11 @@
 //   => [11, 12, 13]
 
 function greaterThanTen(numbers) { 
-  if (number > 10){
-  return numbers.map( (number) => number > 10);
-  }
-  }
 
-// ASK DJ ABOUT THIS ONE
+  const isGreaterThanTen = num => num > 10;
 
+  return numbers.filter(isGreaterThanTen);
+  }
 
 
 // Given an array of strings, return all words that start with 'b' or 'B'.
@@ -50,7 +48,7 @@ function itemsWithLength(items, length) {
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
 function everyOtherItem(items) {
-  return items.filter((index) => index % 2 === 0);
+  return items.filter((_, index) => index % 2 === 0);
 }
 
 // Given a list of words and a letter, return the indexes of the words that
@@ -59,9 +57,9 @@ function everyOtherItem(items) {
 // Ex.:
 //   findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
 //   => [1, 4]
-function findWordsStartingWith(words, letter) {}
-
-// MAY NEED DJ?
+function findWordsStartingWith(words, letter) {
+  return words.filter((word) => word.startsWith(letter)).map(word => words.indexOf(word));
+}
 
 // Return the `n` smallest values in the array in descending order (largest
 // numbers first). Assume that `n` will always be less than the length of the
@@ -72,10 +70,13 @@ function findWordsStartingWith(words, letter) {}
 
 
 
-function smallestNItems(items, n) {}
+function smallestNItems(items, n) {
+  // const sortedItems = items.slice().sort((a, b) => b - a);
 
+  // return sortedItems.slice(n)
+}
 
-
+// ASK DJ
 
 
 // Search for a value in the array and return its index. If the value appears
@@ -84,7 +85,9 @@ function smallestNItems(items, n) {}
 // Ex.:
 //   findIndex(['a', 'b', 'c', 'a', 'b', 'c'], 'c');
 //   => 2
-function findIndex(items, value) {}
+function findIndex(items, value) {
+  
+}
 
 // Given a start number and stop number, return a new array containing all the numbers
 // between the start and stop number.

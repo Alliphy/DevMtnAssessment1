@@ -59,6 +59,7 @@ function generateSentence(person, beverage, location) {
 
 
 function censorVowels(string) {
+  // establish vowels
   const vowels = "aeiouAEIOU";
 
   // replace your vowels using an arrow function

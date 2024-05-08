@@ -29,8 +29,6 @@ function approximatelyEqual(x, y) {
   }
 }
 
-// ASK DJ ABOUT THIS ONE AS WELL
-
 // Given a first name and last name, return a full name in the format "FIRST LAST"
 // Ex.:
 //   fullName('John', 'Doe');
@@ -61,12 +59,14 @@ function generateSentence(person, beverage, location) {
 
 
 function censorVowels(string) {
-  if (string % 2 === 0) {
-    replacedEveryOther += letter;
-} else {
-    replacedEveryOther += "*"
-}
-return;
+  const vowels = "aeiouAEIOU";
+
+  // replace your vowels using an arrow function
+  const replaceVowels = char => (vowels.includes(char) ? "*" : char);
+
+  // return split string and join the replaced vowels to string
+  return string.split("").map(replaceVowels).join("");
+
 }
 
 // Return the given string in sticky case.
@@ -76,16 +76,11 @@ return;
 
 
 function stickyCase(string) {
-  let capitalEveryOther = "";
-  phraseArray.forEach( (letter, index) => {
-    // if the index is even
-    if (index % 2 === 0) {
-        // add the letter to string
-        capitalEveryOther += letter;
-    } else {
-        capitalEveryOther += letter.toUpperCase();
-    }
-} );
+
+  // define my function to change upper and lower case characters via their index
+  const convertCase = (char, index) => (index % 2 === 0 ? char.toLowerCase() : char.toUpperCase());
+
+  return string.split("").map(convertCase).join("");
 }
 
 
@@ -104,7 +99,21 @@ function stickyCase(string) {
 // Ex.:
 //   leetspeak('javascript');
 //   => 'j4v45cr1p7'
-function leetspeak(string) {}
+function leetspeak(string) {
+
+  // using the map method i am going to change the value of each letter
+  const leetChar = {
+    a: "4",
+    e: "3",
+    i: "1",
+    o: "0",
+    s: "5",
+    t: "7",
+  };
+
+  // return the value of the new string with replaced characters. accounting for possible characters being input as capitals
+  return string.split("").map(char => leetChar[char.toLowerCase()] || char).join("")
+}
 
 export {
   approximatelyEqual,

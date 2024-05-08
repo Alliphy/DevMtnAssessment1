@@ -34,7 +34,7 @@ describe('functions.js', () => {
   });
 
   describe('censorVowels', () => {
-    test('should return the given string with all vowels replced with "*" characters', async () => {
+    test('should return the given string with all vowels replaced with "*" characters', async () => {
       expect(functions.censorVowels('javascript')).toBe('j*v*scr*pt');
     });
   });

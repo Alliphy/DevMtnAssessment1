@@ -18,17 +18,31 @@ function average(x, y) {
 }
 
 // Return true if x and y are mostly equivalent up to a tolerance of 0.001.
-// In other words, return true if the aboslute value of x - y is less than 0.001.
+// In other words, return true if the absolute value of x - y is less than 0.001.
 // Ex.:
 //   approximatelyEqual(10.001, 10);
 //   => true
-function approximatelyEqual(x, y) {}
+function approximatelyEqual(x, y) {
+
+  if (x - y < 0.001) {
+    return true;
+  }
+}
+
+// ASK DJ ABOUT THIS ONE AS WELL
 
 // Given a first name and last name, return a full name in the format "FIRST LAST"
 // Ex.:
 //   fullName('John', 'Doe');
 //   => 'John Doe'
-function fullName(firstName, lastName) {}
+// function fullName(firstName, lastName) {
+
+// }
+fullName = (first, last) => {
+  return `${first} ${last}`;
+}
+console.log(fullName("Billy", "Smith"))
+
 
 // Generate the sentence "PERSON was drinking BEVERAGE at LOCATION" using the
 // person, beverage and location provided.

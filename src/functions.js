@@ -38,7 +38,7 @@ function approximatelyEqual(x, y) {
 // function fullName(firstName, lastName) {
 
 // }
-fullName = (first, last) => {
+const fullName = (first, last) => {
   return `${first} ${last}`;
 }
 console.log(fullName("Billy", "Smith"))
@@ -49,19 +49,48 @@ console.log(fullName("Billy", "Smith"))
 // Ex.:
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
-function generateSentence(person, beverage, location) {}
 
-// Return the given string with all vowels replced with '*' characters.
+function generateSentence(person, beverage, location) {
+  return `${person} was drinking ${beverage} at ${location}.`;
+}
+
+// Return the given string with all vowels replaced with '*' characters.
 // Ex.:
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
-function censorVowels(string) {}
+
+
+function censorVowels(string) {
+  if (string % 2 === 0) {
+    replacedEveryOther += letter;
+} else {
+    replacedEveryOther += "*"
+}
+return;
+}
 
 // Return the given string in sticky case.
 // Ex.:
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
-function stickyCase(string) {}
+
+
+function stickyCase(string) {
+  let capitalEveryOther = "";
+  phraseArray.forEach( (letter, index) => {
+    // if the index is even
+    if (index % 2 === 0) {
+        // add the letter to string
+        capitalEveryOther += letter;
+    } else {
+        capitalEveryOther += letter.toUpperCase();
+    }
+} );
+}
+
+
+
+
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this

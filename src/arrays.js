@@ -3,10 +3,11 @@
 //   greaterThanTen([1, 2, 3, 11, 12, 13]);
 //   => [11, 12, 13]
 
-// function greaterThanTen(numbers) {
-  // }
-const numbers = [3, 100, 22];
-greaterThanTen = numbers.map( (number) => number > 10)
+function greaterThanTen(numbers) { 
+  if (number > 10){
+  return numbers.map( (number) => number > 10);
+  }
+  }
 
 // ASK DJ ABOUT THIS ONE
 
@@ -19,7 +20,7 @@ greaterThanTen = numbers.map( (number) => number > 10)
 
 
 function bWords(words) {
-  return words.filter(word => word[0].toLowerCase() === 'b');
+  return words.filter(word => word[0].toLowerCase().startsWith("b"));
 }
 
 
@@ -28,19 +29,29 @@ function bWords(words) {
 // Ex.:
 //  extend([1, 2, 3], [4, 5, 6]);
 //  => [1, 2, 3, 4, 5, 6]
-function extend(originalArray, additionalItems) {}
+function extend(originalArray, additionalItems) {
+  originalArray.push(...additionalItems);
+  return originalArray;
+}
 
 // Return an array of all items with the given length.
 // Ex.:
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
-function itemsWithLength(items, length) {}
+
+function itemsWithLength(items, length) {
+  return items.filter(item => item.length === length);
+}
+// OTHER WAY?? itemsWithLength = items.filter((item) => item.length === length);
+
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
-function everyOtherItem(items) {}
+function everyOtherItem(items) {
+  return items.filter((index) => index % 2 === 0);
+}
 
 // Given a list of words and a letter, return the indexes of the words that
 // start with that letter. You can assume that the words and letter will always
@@ -50,13 +61,22 @@ function everyOtherItem(items) {}
 //   => [1, 4]
 function findWordsStartingWith(words, letter) {}
 
+// MAY NEED DJ?
+
 // Return the `n` smallest values in the array in descending order (largest
 // numbers first). Assume that `n` will always be less than the length of the
 // array.
 // Ex.:
 //   smallestNItems([1, 30, 4, 21, 100000], 3);
 //   => [21, 4, 1]
+
+
+
 function smallestNItems(items, n) {}
+
+
+
+
 
 // Search for a value in the array and return its index. If the value appears
 // more than once, return the index of the *FIRST* occurrence of the value. If

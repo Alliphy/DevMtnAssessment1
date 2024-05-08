@@ -227,13 +227,13 @@ Functions can be used to create named blocks of code that can be executed/reused
 **_What is the difference between `console.log` and `return`?_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+console.log will log into the console while return will actually end and return your function
 ```
 
 **_What's the difference between defining and calling a function?_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+when you define a function you are creating it. When you call a function you are enacting it.
 ```
 
 ### B.2. Describe these data types.
@@ -243,25 +243,25 @@ Write a short description of the following data types:
 **_String_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+a string is a string of data and is defined by using ""
 ```
 
 **_Number_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+this is a number and can only be a number 
 ```
 
 **_Boolean_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+true or false value. normally will use within if else statements
 ```
 
 **_Array_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+an array is essentially a list of items sorted in an array. arrays use [] and indexes
 ```
 
 ### B.3. Trace the value of `x`
@@ -284,7 +284,7 @@ completed for you.
 
 ```
 Initial values: y = 0, x = 5
-1:              y = 1, x = ??
-2:              y = 2, x = ??
-3:              y = 3, x = ??
+1:              y = 1, x = 10
+2:              y = 2, x = 15
+3:              y = 3, x = 20
 ```

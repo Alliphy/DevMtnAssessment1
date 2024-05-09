@@ -71,12 +71,14 @@ function findWordsStartingWith(words, letter) {
 
 
 function smallestNItems(items, n) {
-  // const sortedItems = items.slice().sort((a, b) => b - a);
+  const sortedItems = items.sort((a, b) => a- b);
 
-  // return sortedItems.slice(n)
+  const topN = sortedItems.slice(0, n);
+
+  const descSort = topN.sort((a, b) => b - a)
+  return descSort;
 }
 
-// ASK DJ
 
 
 // Search for a value in the array and return its index. If the value appears
@@ -86,7 +88,12 @@ function smallestNItems(items, n) {
 //   findIndex(['a', 'b', 'c', 'a', 'b', 'c'], 'c');
 //   => 2
 function findIndex(items, value) {
-  
+  const index = items.indexOf(value);
+
+  if (index === -1) {
+    return undefined;
+  }
+  return index;
 }
 
 // Given a start number and stop number, return a new array containing all the numbers
@@ -94,7 +101,14 @@ function findIndex(items, value) {
 // Ex.:
 //   range(1, 5);
 //   => [1, 2, 3, 4, 5]
-function range(start, stop) {}
+function range(start, stop) {
+  const arr = [];
+
+  for (let i = start; i <= stop; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
 
 export {
   bWords,
